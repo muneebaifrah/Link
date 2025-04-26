@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <style>
+    body {
+      background-color: black;
+      color: green;
+      font-family: monospace;
+      font-size: 18px;
+      white-space: pre;
+      padding: 20px;
+    }
+    #message {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+<div id="message">Connecting to server...</div>
+
+<script>
+let text = `
+Loading virus.exe...
+Establishing connection to target...
+Uploading payload...
+Bypassing firewall...
+Accessing personal data...
+Injecting trojan...
+Compromising system...
+Encrypting files...
+Your DATA is HACKED Successfully......
+`;
+
+let i = 0;
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("message").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 50);
+  } else {
+    setTimeout(() => {
+      document.getElementById("message").innerHTML = "😂 GOTCHA! Don't Phish next time!\n- From your Dev Friend ❤️";
+      document.body.style.color = "red";
+      document.body.style.fontSize = "24px";
+      document.body.style.textAlign = "center";
+    }, 2000);
+  }
+}
+
+setTimeout(typeEffect, 1000);
+</script>
+
+</body>
+</html>
